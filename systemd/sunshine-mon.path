@@ -1,0 +1,9 @@
+[Unit]
+Description="Monitor sunshine apps.json for changes"
+
+[Path]
+PathModified=/home/oakley/.config/sunshine/apps.json
+Unit=sunshine-mon.service
+
+[Install]
+WantedBy=graphical-session.target

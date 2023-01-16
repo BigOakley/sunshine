@@ -1,0 +1,5 @@
+[Unit]
+Description="Restart Sunshine Service when Application Configuration Changes"
+
+[Service]
+ExecStart=/home/oakley/.local/bin/sunshine_restart.sh

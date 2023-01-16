@@ -1,0 +1,9 @@
+[Unit]
+Description=Sunshine is a self-hosted game stream host for Moonlight.
+
+[Service]
+ExecStart=flatpak run dev.lizardbyte.sunshine
+ExecStop=flatpak kill dev.lizardbyte.sunshine
+
+[Install]
+WantedBy=graphical-session.target

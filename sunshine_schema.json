@@ -1,0 +1,51 @@
+{
+  "title": "apps",
+  "description": "sunshine app launcher",
+  "type": "object",
+  "properties": {
+    "env": {
+      "type": "string",
+      "description": "Environment settings required by the applications"
+    }
+    "apps": {
+      "type": "object",
+      "description": "Applications that launch",
+      "properties": {
+        "name": {
+          "description": "Name of applications",
+          "type": "string"
+        },
+        "output": {
+          "description": "output log file",
+          "type": "string"
+        },
+        "prep-cmd": { [
+          "type": "object",
+          "description": "Commands to run before and after the application",
+          {
+            "do": {
+              "description": "pre application launch command",
+              "type": "string"
+            },
+            "undo": {
+              "description": "post application commands",
+              "type": "string"
+            }
+          }
+        ]},
+        "cmd": {
+          "type": "string",
+          "description": "Command to run to start the application"
+        },
+        "detached": {
+          "type": "string",
+          "description": "Command that runs but isn't monitored"
+        },
+        "image-path": {
+          "description": "path to image file to show on launcher",
+          "type": "string"
+        },
+      }
+    }
+  }
+}
